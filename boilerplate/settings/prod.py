@@ -1,0 +1,18 @@
+from boilerplate.settings.settings import *
+
+REACT_APP_DIR = os.path.join(BASE_DIR, 'client')
+
+STATICFILES_DIRS = [
+    os.path.join(REACT_APP_DIR, 'build', 'static'),
+]
+
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 3600
+SECURE_SSL_REDIRECT = True
+SECURE_REDIRECT_EXEMPT = [r'^-/']  # Healthcheck URLs
+SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'SAMEORIGIN'
